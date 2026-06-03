@@ -29,12 +29,26 @@ targets:
       schema: dev
     presets:
       artifacts_dynamic_version: true
+
+  test:
+    mode: production
+    workspace:
+      host: https://adb-7405608974932665.5.azuredatabricks.net/
+      # We explicitly deploy to /Workspace/Users/cjknobla_gmail.com#ext#@cjknoblagmail.onmicrosoft.com to make sure we only have a single copy.
+      root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}
+    variables:
+      catalog: dbw_dev_useast
+      schema: prod
+    permissions:
+      - user_name: cjknobla_gmail.com#ext#@cjknoblagmail.onmicrosoft.com
+        level: CAN_MANAGE
+
   prod:
     mode: production
     workspace:
-      host: https://adb-7405610065863049.9.azuredatabricks.net
+      host: https://adb-7405619131964709.9.azuredatabricks.net/
       # We explicitly deploy to /Workspace/Users/cjknobla_gmail.com#ext#@cjknoblagmail.onmicrosoft.com to make sure we only have a single copy.
-      root_path: /Workspace/Users/cjknobla_gmail.com#ext#@cjknoblagmail.onmicrosoft.com/.bundle/${bundle.name}/${bundle.target}
+      root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}
     variables:
       catalog: dbw_dev_useast
       schema: prod
