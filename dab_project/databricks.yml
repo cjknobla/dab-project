@@ -32,6 +32,8 @@ targets:
 
   test:
     mode: production
+    presets:
+     name_prefix: '[testing]'
     workspace:
       host: https://adb-7405608974932665.5.azuredatabricks.net/
       # We explicitly deploy to /Workspace/Users/cjknobla_gmail.com#ext#@cjknoblagmail.onmicrosoft.com to make sure we only have a single copy.
