@@ -10,6 +10,7 @@ include:
 # Variable declarations. These variables are assigned in the dev/prod targets below.
 variables:
   catalog:
+    default: "citibike_dev"
     description: The catalog to use
   schema:
     description: The schema to use
@@ -25,7 +26,6 @@ targets:
     workspace:
       host: https://adb-7405610065863049.9.azuredatabricks.net
     variables:
-      catalog: dbw_dev_useast
       schema: dev
     presets:
       artifacts_dynamic_version: true
@@ -39,7 +39,7 @@ targets:
       # We explicitly deploy to /Workspace/Users/cjknobla_gmail.com#ext#@cjknoblagmail.onmicrosoft.com to make sure we only have a single copy.
       root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}
     variables:
-      catalog: dbw_dev_useast
+      catalog: "citibike_test"
       schema: prod
     permissions:
       - user_name: cjknobla_gmail.com#ext#@cjknoblagmail.onmicrosoft.com
@@ -52,7 +52,7 @@ targets:
       # We explicitly deploy to /Workspace/Users/cjknobla_gmail.com#ext#@cjknoblagmail.onmicrosoft.com to make sure we only have a single copy.
       root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}
     variables:
-      catalog: dbw_dev_useast
+      catalog: "citibike_prod"
       schema: prod
     permissions:
       - user_name: cjknobla_gmail.com#ext#@cjknoblagmail.onmicrosoft.com
