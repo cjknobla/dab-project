@@ -14,6 +14,8 @@ variables:
     description: The catalog to use
   schema:
     description: The schema to use
+  dev_flag:
+    default: true
 
 targets:
   dev:
@@ -41,6 +43,7 @@ targets:
     variables:
       catalog: "citibike_test"
       schema: prod
+      dev_flag: false
     permissions:
       - user_name: cjknobla_gmail.com#ext#@cjknoblagmail.onmicrosoft.com
         level: CAN_MANAGE
@@ -54,6 +57,7 @@ targets:
     variables:
       catalog: "citibike_prod"
       schema: prod
+      dev_flag: false
     permissions:
       - user_name: cjknobla_gmail.com#ext#@cjknoblagmail.onmicrosoft.com
         level: CAN_MANAGE
