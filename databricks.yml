@@ -45,8 +45,10 @@ targets:
       schema: prod
       dev_flag: false
     permissions:
-      - user_name: cjknobla_gmail.com#ext#@cjknoblagmail.onmicrosoft.com
+      - service_principal_name: b18c25c9-e662-424c-8acd-c9004bdd37e6
         level: CAN_MANAGE
+    run_as:
+      service_principal_name: b18c25c9-e662-424c-8acd-c9004bdd37e6
 
   prod:
     mode: production
