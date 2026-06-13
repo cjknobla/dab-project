@@ -10,3 +10,4 @@ scratch/**
 **/!explorations/README.md
 .venv*/
 venv/
+.vscode/
