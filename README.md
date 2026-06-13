@@ -20,10 +20,10 @@ You'll also want to set up local Python environments for Databricks Connect and 
 
 #### macOS / Linux
 
-1. **Create and activate the Databricks Connect environment (using Python 3.11)**
+1. **Create and activate the Databricks Connect environment (using Python 3.12)**
    ```bash
    # at the project root
-   python3.11 -m venv .venv_dbc
+   python3.12 -m venv .venv_dbc
    source .venv_dbc/bin/activate
    ```
 2. **Install Databricks Connect dependencies**
