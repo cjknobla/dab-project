@@ -38,7 +38,7 @@ You'll also want to set up local Python environments for Databricks Connect and 
 
 4. **Create and activate the local PySpark environment**
    ```bash
-   python3.11 -m venv .venv_pyspark
+   python3.12 -m venv .venv_pyspark
    source .venv_pyspark/bin/activate
    ```
 5. **Install PySpark dependencies**
@@ -56,7 +56,7 @@ You'll also want to set up local Python environments for Databricks Connect and 
 1. **Create and activate the Databricks Connect environment (using Python 3.11)**
    ```powershell
    # at the project root
-   py -3.11 -m venv .venv_dbc
+   py -3.12 -m venv .venv_dbc
    .\.venv_dbc\Scripts\activate
    ```
 2. **Install Databricks Connect dependencies**
